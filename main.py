@@ -55,73 +55,227 @@ from database import Postgres
 
 class GUI:
     def __init__(self, database):
+        sg.theme('DarkAmber')
+
         self.database = database
+        self.rows = []
+        self.hl_rows = []
+        self.values_list = ['spell_name', 'level', 'casting_time', 'range', 'duration', 'classes', 'school', 'ritual']
 
-        # Search Screen Layout
-        self.input_frame= [
-                    [sg.Text("Spell Name", size=(12, 1)), sg.InputText(size=(36, 1))],
-                    [sg.Text("Spell Level", size=(12, 1)), sg.Combo(['Cantrip', 'Level 1', 'Level 2', 'Level 3', 'Level 4', 'Level 5', 'Level 6', 'Level 7', 'Level 8', 'Level 9', 'Any'], default_value='Cantrip', size=(24, 1))],
-                    [sg.Text("Casting Time", size=(12, 1)), sg.Combo(['1 Action', '1 Bonus Action', '1 Reaction', 'Other', 'Any'], default_value='Any', size=(24, 1))],
-                    [sg.Text("Range (ft)", size=(12, 1)), sg.InputText(size=(36, 1))],
-                    [sg.Text("Duration", size=(12, 1)), sg.InputText(size=(36, 1))],
-                    [sg.Text("Class", size=(12, 1)), sg.Combo(['Wizard', 'Bard', 'Cleric', 'Druid', 'Paladin', 'Ranger', 'Sorcerer', 'Warlock', 'Any' ], default_value='Any', size=(24, 1))],
-                    [sg.Text("Ritual?", size=(12, 1)), sg.Checkbox('Yes', default=False)],
-                    [sg.ReadButton('Add'), sg.ReadButton('Replace'), sg.Button('Highlight'), sg.Button('Quit')]]
+        self.window = self.make_window()
 
-        self.spell_name_col = [[sg.Text("Spell Name")]]
-
-        self.lvl_col = [[sg.Text("Lvl")]]
-
-        self.time_col = [[sg.Text("Cast Time")]]
-
-        self.range_col = [[sg.Text("R (ft)")]]
-
-        self.components_col = [[sg.Text("Components ($)")]]
-
-        self.duration_col = [[sg.Text("Duration")]]
-
-        self.ritual_col = [[sg.Text("Ritual?")]]
-
-        self.button_col = [[]]
-
-        # RESULTS FRAME
-        self.results_frame = [[   sg.Column(self.spell_name_col),
-                            sg.Column(self.lvl_col),
-                            sg.Column(self.time_col),
-                            sg.Column(self.range_col),
-                            sg.Column(self.components_col),
-                            sg.Column(self.duration_col),
-                            sg.Column(self.ritual_col),
-                            sg.Column(self.button_col)
-                        ]]
-
-        # FINAL LAYOUT
-
-        self.layout = [  [sg.Frame("Spell Criteria", self.input_frame, vertical_alignment='top'), sg.VerticalSeparator(pad=None), sg.Frame("Results", self.results_frame, vertical_alignment='top')],
-                    ]
-        # create the window
-
-        window = sg.Window(title='Spell Lookup', layout=self.layout, size = (1000, 800))
-
-        # CONTINUALLY READ WINDOW LOOP
-        
         while True:
-            button, values = window.Read()
+            button, values = self.window.Read()
+            print(button)
             if button is None or button == 'Quit':
                 break
-            if button == 'Add' or button == 'Replace':
-                self.search(values)
-                #Probably need a window.update of some kind here
+            elif button == 'Add':
+                self.add(values)
+                self.update()
+            elif button == 'Replace':
+                self.replace(values)
+                self.update()
+            elif button == 'Highlight':
+                pass
+            elif button == 'Clear':
+                self.rows = []
+                self.hl_rows = []
+                self.update()
+            elif button[:-1] == 'up':
+                row = self.rows.pop(int(button[-1]))
+                self.hl_rows.append(row)
+                self.update()
+            elif button[:-1] == 'hl_down':
+                row = self.hl_rows.pop(int(button[-1]))
+                self.rows.append(row)
+                self.update()
+            elif button[:-1] == 'hl_del':
+                self.hl_rows.pop(int(button[-1]))
+                self.update()
+            elif button[:-1] == 'del':
+                self.rows.pop(int(button[-1]))
+                self.update()
+
+
+
+    def make_window(self):
+
+        # Set Up Screen Layout
+        input_frame= [
+                    [sg.Text("Spell Name", size=(12, 1)), sg.InputText(size=(36, 1))],
+                    [sg.Text("Spell Level", size=(12, 1)), sg.Combo([   'Cantrip',
+                                                                        'Level 1',
+                                                                        'Level 2',
+                                                                        'Level 3',
+                                                                        'Level 4',
+                                                                        'Level 5',
+                                                                        'Level 6',
+                                                                        'Level 7',
+                                                                        'Level 8',
+                                                                        'Level 9',
+                                                                        'Any'], default_value='Any', size=(24, 1))],
+
+                    [sg.Text("Casting Time", size=(12, 1)), sg.Combo(['1 Action', '1 Bonus Action', '1 Reaction', 'Other', 'Any'], default_value='Any', size=(24, 1))],
+                    [sg.Text("Range", size=(12, 1)), sg.InputText(size=(36, 1))],
+                    [sg.Text("Duration", size=(12, 1)), sg.InputText(size=(36, 1))],
+                    [sg.Text("Class", size=(12, 1)), sg.Combo(['Wizard', 'Bard', 'Cleric', 'Druid', 'Paladin', 'Ranger', 'Sorcerer', 'Warlock', 'Any' ], default_value='Any', size=(24, 1))],
+                    [sg.Text("School", size=(12, 1)), sg.Combo(['Abjuration', 'Conjuration', 'Divination', 'Enchantment', 'Evocation', 'Illusion', 'Necromancy', 'Transmutation', 'Any'], default_value='Any', size=(24,1))],
+                    [sg.Text("Ritual?", size=(12, 1)), sg.Checkbox('Yes', default=False)],
+                    [sg.ReadButton('Add'), sg.ReadButton('Replace'), sg.Button('Highlight'), sg.Button('Clear'), sg.Button('Quit')]]
+
+
+
+
+        # RESULTS FRAME
+        results_col = [[    sg.Text("Spell Name", size=(18, 1)),
+                            sg.Text("Lvl", size=(5, 1)),
+                            sg.Text("Cast Time", size=(10, 1)),
+                            sg.Text("Range", size=(15, 1)),
+                            sg.Text("Components", size=(12, 1)),
+                            sg.Text("Duration", size=(12, 1)),
+                            sg.Text("Ritual?", size=(8, 1)),
+                            sg.Text("Buttons", size=(10, 1))
+                        ], [sg.Text('_'*125)] ]
+
+
+
+        # ADD HIGHLIGHTED ROWS HERE
+        ii = 0
+        for row in self.hl_rows:
+            spell_name = row[0]
+            level = row[1]
+            cast_time = row[2]
+            range = row[3]
+
+            if row[4] is not None and '(' in row[4]:
+                component_list = row[4].split('(')
+                components = component_list[0]
+            else:
+                components = row[4]
+            if row[4] is not None and ' gp ' in row[4]:
+                components += " ($)"
+
+            duration = row[5]
+            ritual = '  Y' if row[7] else ""
+
+
+            results_col.append([    sg.Text(spell_name, size=(18, 1)),
+                                    sg.Text(level, size=(5, 1)),
+                                    sg.Text(cast_time, size=(10, 1)),
+                                    sg.Text(range, size=(15, 1)),
+                                    sg.Text(components, size=(12, 1)),
+                                    sg.Text(duration, size=(12, 1)),
+                                    sg.Text(ritual, size=(8, 1)),
+                                    sg.Button('↑', key=f'hl_up{ii}'), sg.Button('↓', key=f'hl_down{ii}'), sg.Button('x', key=f'hl_del{ii}')
+            ])
+
+            ii += 1 # Add one to index
+
+        results_col.append([sg.Text('_'*125)])
+
+        # ADD NON-HIGHLIGHTED ROWS HERE
+        ii = 0
+        for row in self.rows:
+            spell_name = row[0]
+            level = row[1]
+            cast_time = row[2]
+            range = row[3]
+
+            if row[4] is not None and '(' in row[4]:
+                component_list = row[4].split('(')
+                components = component_list[0]
+            else:
+                components = row[4]
+            if row[4] is not None and ' gp ' in row[4]:
+                components += " ($)"
+
+            duration = row[5]
+            ritual = '  Y' if row[7] else ""
+
+
+            results_col.append([    sg.Text(spell_name, size=(18, 1)),
+                                    sg.Text(level, size=(5, 1)),
+                                    sg.Text(cast_time, size=(10, 1)),
+                                    sg.Text(range, size=(15, 1)),
+                                    sg.Text(components, size=(12, 1)),
+                                    sg.Text(duration, size=(12, 1)),
+                                    sg.Text(ritual, size=(8, 1)),
+                                    sg.Button('↑', key=f'up{ii}'), sg.Button('↓', key=f'down{ii}'), sg.Button('x', key=f'del{ii}')
+            ])
+
+            ii += 1 # Add one to index
+
+        # Final Frames
+        results_frame = [[sg.Column(results_col, scrollable=True, size = (1000, 750))]]
+
+        # Final Layout
+        layout = [[ sg.Frame("Selection Criteria", input_frame, vertical_alignment='top', size = (400, 750)),
+                    sg.VerticalSeparator(pad=None),
+                    sg.Frame("Results", results_frame, vertical_alignment='top', size = (1000, 750))
+                ]]
+        # create the window
+
+        window = sg.Window(title='Spell Lookup', layout=layout, location=(0,0), element_padding=(5,5), font=(25))
+        return window
+
 
     def search(self, values):
-        print("searching!")
-        # SQL Search here
-        rows = []
-        self.display_results(rows)
+        # Translate values into a dict for calling database.query_spells(dictionary)
+        dict = {}
 
+        if values[0] != "":
+            dict["spell_name"] = values[0]
+        if values[1] != "Any":
+            if values[1] == "Cantrip":
+                dict["level"] = 'C'
+            else:
+                dict["level"] = int(values[1][-1])
+        if values[2] != "Any":
+            dict["casting_time"] = values[2]
+        if values[3] != "":
+            dict["range"] = values[3]
+        if values[4] != "":
+            dict["duration"] = values[4]
+        if values[5] != "Any":
+            dict["classes"] = values[5]
+        if values[6] != "Any":
+            dict["school"] = values[6]
+        if values[7] == True:
+            dict["ritual"] = True
 
-    def display_results(self, rows):
+        rows = database.query_spells(dict)
+        print([row[0] for row in rows])
+        return rows
+
+    def update(self):
+        self.window.close()
+        self.window = self.make_window()
+
+    # Button Methods
+
+    def add(self, values):
+        rows = self.search(values)
+        self.rows += rows
+        self.update()
+
+    def replace(self, values):
+        rows = self.search(values)
+        self.rows = rows
         pass
+
+    def highlight(self, values):
+        pass
+
+    def up(self):
+        pass
+
+    def down(self):
+        pass
+
+    def delete(self):
+        pass
+
+
 
 #------------------ MAIN METHOD ------------------------
 
@@ -129,7 +283,3 @@ if __name__ == "__main__":
     print("\nRunning Main...\n")
     database = Postgres()
     gui = GUI(database)
-
-
-    database.cursor.execute("SELECT * from spells WHERE spell_name = \'Acid Splash\';")
-    rows = database.cursor.fetchall()
