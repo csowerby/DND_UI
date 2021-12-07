@@ -14,3 +14,361 @@ Natural Weapons: You grow claws, fangs, spines, horns, or a different natural we
 Animal Friendship,1,1 action,30 ft,VSM(a morsel of food),24 hours,"{Bard, Druid, Ranger}",0,1,Enchantment,"This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast’s Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell’s duration. If you or one of your companions harms the target, the spell ends. 
 
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st."
+Animal Messenger,2,1 action,30 ft,VSM(a morsel of food),24 hours,"{Bard, Druid, Ranger}",1,0,Enchantment,"By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat. You specify a location, which you must have visited, and a recipient who matches a general description, such as “a man or woman dressed in the uniform of the town guard” or “a red-haired dwarf wearing a pointed hat.” You also speak a message of up to twenty-five words. The target beast travels for the duration of the spell toward the specified location, covering about 50 miles per 24 hours for a flying messenger, or 25 miles for other animals.
+
+When the messenger arrives, it delivers your message to the creature that you described, replicating the sound of your voice. The messenger speaks only to a creature matching the description you gave. If the messenger doesn’t reach its destination before the spell ends, the message is lost, and the beast makes its way back to where you cast this spell.
+
+At Higher Levels. If you cast this spell using a spell slot of 3rd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd."
+Animal Shapes,8,1 action,30 ft,VS,24 hours,{Druid},0,1,Transmutation,"Your magic turns others into beasts. Choose any number of willing creatures that you can see within range. You transform each target into the form of a large or smaller beast with a challenge rating of 4 or lower. On subsequent turns, you can use your actions to transform affected creatures into new forms.
+
+The transformation lasts for the duration for each target, or until the target drops to 0 hit points or dies. You can choose a different form for each target. A target’s game statistics are replaced by the statistics of the chosen beast, though the target retains its alignment and Intelligence, Wisdom, and Charisma scores. The target assumes the hit points of its new form, and when it reverts to its normal form, it returns to the number of hit point it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn’t reduce the creature’s normal form to 0 hit points, it isn’t knocked unconcious. The creature is limited in the actions it can perform by the nature of its new form, and it can’t speak or cast spells.
+
+The target’s gear melds into the new form. The target can’t activate, wield, or otherwise benefit from any of its equipment."
+Animate Dead,3,1 minute,10 ft,"VSM(a drop of blood, a piece of flesh, and a pinch of bone dust)",Instantaneous,"{Cleric, Wizard}",0,0,Necromancy,"This spell creates an undead servant. Choose a pile of bones or a corpse of a Medium or Small humanoid within range. Your spell imbues the target with a foul mimicry of life, raising it as an undead creature. The target becomes a skeleton if you chose bones or a zombie if you chose a corpse (the DM has the creature’s game statistics).
+
+On each of your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.
+
+The creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain the control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell, rather than animating a new one.
+
+At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each of the creatures must come from a different corpse or pile of bones."
+Animate Objects,5,1 action,120 ft,VS,1 minute,"{Bard, Sorcerer, Wizard}",0,1,Transmutation,"Objects come to life at your command. Choose up to ten nonmagical objects within range that are not being worn or carried. Medium targets count as two objects, Large targets count as four objects, Huge targets count as eight objects. You can’t animate any object larger than Huge. Each target animates and becomes a creature under your control until the spell ends or until reduced to 0 hit points.
+
+As a bonus action, you can mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete. 
+
+An animated object is a construct with AC, hit points, attacks, Strength, and Dexterity determine by its size. Its Constitution is 10 and its Intelligence and Wisdom are 3, and its Charisma is 1. Its speed is 30 feet; if the objects lack legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or larger object, such as a chain bolted to a wall, its speed is 0. It has blindsight with a radius of 30 feet and is blind beyond that distance. When the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form.
+
+If you command an object to attack, it can make a single melee attack against a creature within 5 feet of it. It makes a slam attack with an attack bonus and bludgeoning damage determine by its size. The DM might rule that a specific object inflicts slashing or piercing damage based on its form.
+
+At Higher Levels. If you cast this spell using a spell slot of 6th level or higher, you can animate two additional objects for each slot level above 5th.
+
+NOTE: LOOK UP ANIMATED OBJECT STATISTICS ONLINE "
+Antilife Shell,5,1 action,Self(10-foot radius),VS,1 hour,{Druid},0,1,Abjuration,"A shimmering barrier extends out from you in a 10-foot radius and moves with you, remaining centered on you and hedging out creatures other than undead and constructs.
+
+The barrier lasts for the duration. The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier.
+
+If you move so that an affected creature is forced to pass through the barrier, the spell ends."
+Antimagic Field,8,1 action,Self(10-foot radius sphere),VSM(a pinch of powdered iron or iron fillings),1 hour,"{Cleric, Wizard}",0,1,Abjuration,"A 10-foot-radius invisible sphere of antimagic surrounds you. This area is divorced from the magical energy that suffuses the multiverse. Within the sphere, spells can’t be cast, summoned creatures disappear, and even magic items become mundane. Until the spell ends, the sphere moves with you, centered on you.
+
+Spells and other magical effects, except those created by an artifact or a deity, are suppressed in the sphere and can’t protrude into it. A slot expended to cast a suppressed spell is consumed. While an effect is suppressed, it doesn’t function, but the time it spends suppressed counts against its duration.
+
+Targeted Effects. Spells and other magical effects, such as Magic Missile and Charm Person, that target a creature or an object in the sphere have no effect on that target.
+Areas of Magic. The area of another spell or magical effect, such as Fireball, can’t extend into the sphere. If the sphere overlaps an area of magic, the part of the area that is covered by the sphere is suppressed. For example, the flames created by a Wall of Fire are suppressed within the sphere, creating a gap in the wall if the overlap is large enough.
+Spells. Any active spell or other magical effect on a creature or an object in the sphere is suppressed while the creature or object is in it.
+Magic Items. The properties and powers of magic items are suppressed in the sphere. For example, a +1 longsword in the sphere functions as a nonmagical longsword. A magic weapon’s properties and powers are suppressed if it is used against a target in the sphere or wielded by an attacker in the sphere. If a magic weapon or piece of magic ammunition fully leaves the sphere – for example, if you fire a magic arrow or throw a magic spear at a target outside the sphere – the magic of the item ceases to be suppressed as soon as it exits.
+Magical Travel. Teleportation and planar travel fail to work in the sphere, whether the sphere is the destination or the departure point for such magical travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the rope trick spells, temporarily closes while in the sphere.
+Creatures and Objects. A creature or object summoned or created by magic temporarily winks out of existence in the sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the sphere.
+Dispel Magic. Spells and magical effects such as Dispel Magic have no effect on the sphere. Likewise, the spheres created by different Antimagic Field spells don’t nullify each other."
+Antipathy/Sympathy,8,1 hour,60 ft,VSM(either a lump of alum soaked in viegar for the antipathy effect or a drop of honey for the sympathy effect),10 days,"{Bard, Druid, Wizard}",0,0,Enchantment,"This spell attracts or repels creatures of your choice. You target something within range, either a Huge or smaller object or creature or an area that is no larger than a 200-foot cube. Then specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura’s effect.
+
+Antipathy. The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become frightened. The creature remains frightened while it can see the target or is within 60 feet of it. While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can’t see the target. If the creature moves more than 60 feet from the target and can’t see it, the creature is no longer frightened, but the creature becomes frightened again if it regains sight of the target or moves within 60 feet of it.
+Sympathy. The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet o fit, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can’t willingly move away from the target. If the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the effect, as described below.
+Ending the Effect. If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. On a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the spell is allowed another Wisdom saving throw every 24 hours while the spell persists. A creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again."
+Arcane Eye,4,1 action,30 ft,VSM(a bit of bat fur),1 hour,{Wizard},0,1,Divination,"You create an invisible, magical eye within range that hovers in the air for the duration. You mentally receive visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction.
+
+As an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can’t enter another plane of existence. A solid barrier blocks the eye’s movement, but the eye can pass through an opening as small as 1 inch in diameter."
+Arcane Gate,6,1 action,500 ft,VS,10 minutes,"{Sorcerer, Warlock, Wizard}",0,1,Conjuration,"You create linked teleportation portals that remain open for the duration. Choose two points on the ground that you can see, one point within 10 feet of you and one point within 500 feet of you. A circular portal, 10 feet in diameter, opens over each point. If the portal would open in the space occupied by a creature, the spell fails, and the casting is lost.
+
+The portals are two-dimensional glowing rings filled with mist, hovering inches from the ground and perpendicular to it at the points you choose. A ring is visible only from one side (your choice), which is the side that functions as a portal.
+
+Any creature or object entering the portal exits from the other portal as if the two were adjacent to each other; passing through a portal from the nonportal side has no effect. The mist that fills each portal is opaque and blocks vision through it. On your turn, you can rotate the rings as a bonus action so that the active side faces in a different direction."
+Arcane Lock,2,1 action,touch,"VSM(gold dust worth at least 25 gp, which the spell consumes)",Until dispelled,{Wizard},0,0,Abjuration,"You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration.
+
+You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.
+
+While affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10."
+Armor of Agathys,1,1 action,self,VSM(a cup of water),1 hour,{Warlock},0,0,Abjuration,"A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot."
+Arms of Hadar,1,1 action,self(10-foot radius),VS,Instantaneous,{Warlock},0,0,Conjuration,"You invoke the power of Hadar, the Dark Hunger. Tendrils of dark energy erupt from you and batter all creatures within 10 feet of you. Each creature in that area must make a Strength saving throw. On a failed save, a target takes 2d6 necrotic damage and can’t take reactions until its next turn. On a successful save, the creature takes half damage, but suffers no other effect.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
+Astral Projection,9,1 hour,10 ft,"VSM(for each creature you affect with this spell, you must provide one jacinth worth at least 1,000 gp and one ornately carved bar of silver worth at least 100 gp, all of which the spell consumes)",Special,"{Cleric, Warlock, Wizard}",0,0,Necromancy,"You and up to eight willing creatures within range project your astral bodies into the Astral Plane (the spell fails and the casting is wasted if you are already on that plane). The material body you leave behind is unconscious and in a state of suspended animation; it doesn’t need food or air and doesn’t age.
+
+Your astral body resembles your mortal form in almost every way, replicating your game statistics and possessions. The principal difference is the addition of a silvery cord that extends from between your shoulder blades and trails behind you, fading to invisibility after 1 foot. This cord is your tether to your material body. As long as the tether remains intact, you can find your way home. If the cord is cut – something that can happen only when an effect specifically states that it does – your soul and body are separated, killing you instantly.
+
+Your astral form can freely travel through the Astral Plane and can pass through portals there leading to any other plane. If you enter a new plane or return to the plane you were on when casting this spell, your body and possessions are transported along the silver cord, allowing you to re-enter your body as you enter the new plane. Your astral form is a separate incarnation. Any damage or other effects that apply to it have no effect on your physical body, nor do they persist when you return to it. The spell ends for you and your companions when you use your action to dismiss it. When the spell ends, the affected creature returns to its physical body, and it awakens.
+
+The spell might also end early for you or one of your companions. A successful Dispel Magic spell used against an astral or physical body ends the spell for that creature. If a creature’s original body or its astral form drops to 0 hit points, the spell ends for that creature. If the spell ends and the silver cord is intact, the cord pulls the creature’s astral form back to its body, ending its state of suspended animation. If you are returned to your body prematurely, your companions remain in their astral forms and must find their own way back to their bodies, usually by dropping to 0 hit points."
+Augury,2,1 minute,self,"VSM(specially marked sticks, bones, or similar tokens worth at least 25 gp)",Instantaneous,"{Cleric, Druid, Wizard}",1,0,Divination,"By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity about the results of a specific course of action that you plan to take within the next 30 minutes. The DM chooses from the following possible omens:
+
+Weal, for good results
+Woe, for bad results
+Weal and woe, for both good and bad results
+Nothing, for results that aren’t especially good or bad
+The spell doesn’t take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion. If you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
+Aura of Life,4,1 action,self(30-foot radius),V,10 minutes,"{Cleric, Paladin}",0,1,Abjuration,"Life-preserving energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each non-hostile creature in the aura (including you) has resistance to necrotic damage, and its hit point maximum can’t be reduced. In addition, a non-hostile, living creature regains 1 hit point when it starts its turn in the aura with 0 hit points."
+Aura of Purity,4,1 action,self(30-foot-radius),V,10 minutes,"{Cleric, Paladin}",0,1,Abjuration,"Purifying energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each non-hostile creature in the aura (including you) can’t become diseased, has resistance to poison damage, and has advantage on saving throws against effects that cause any of the following conditions: blinded, charmed, deafened, frightened, paralyzed, poisoned, and stunned."
+Aura of Vitality,3,1 action,self(30-foot radius),V,1 minute,"{Cleric, Druid, Paladin}",0,1,Evocation,"Healing energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. You can use a bonus action to cause one creature in the aura (including you) to regain 2d6 hit points."
+Awaken,5,8 hours,Touch,"VSM(an agate worth at least 1,000 gp which the spell consumes)",Instantaneous,"{Bard, Druid}",0,0,Transmutation,"After spending the casting time tracing magical pathways within a precious gemstone, you touch a huge or smaller beast or plant. The target must have either no Intelligence score or an Intelligence of 3 or less.
+
+The target gains an Intelligence of 10. The target also gains the ability to speak one language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. Your DM chooses statistics appropriate for the awakened plant, such as the statistics for the awakened shrub or the awakened tree.
+
+The awakened beast or plant is charmed by you for 30 days or until you and your companions do anything harmful to it. When the charmed condition ends, the awakened creature chooses whether to remain friendly to you, based on how you treated it while it was charmed."
+Bane,1,1 action,30 ft,VSM(a drop of blood),1 minute,"{Bard, Cleric}",0,1,Enchantment,"Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+Banishing Smite,5,1 bonus action,self,V,1 minute,{Paladin},0,1,Abjuration,"The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage to the target. Additionally, if this attack reduces the target to 50 hit points of fewer, you banish it. If the target is native to a different plane of existence than the on you’re on, the target disappears, returning to its home plane. If the target is native to the plane you’re on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied."
+Banishment,4,1 action,60 ft,VSM(an item distateful to the target),1 minute,"{Cleric, Paladin, Sorcerer, Warlock, Wizard}",0,1,Abjuration,"You attempt to send one creature that you can see within range to another place of existence. The target must succeed on a Charisma saving throw or be banished.
+
+If the target is native to the plane of existence you’re on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.
+
+If the target is native to a different plane of existence that the one you’re on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn’t return.
+
+At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th."
+Barkskin,2,1 action,touch,VSM(a handful of oak bark),1 hour,"{Druid, Ranger}",0,1,Transmutation,"You touch a willing creature. Until the spell ends, the target’s skin has a rough, bark-like appearance, and the target’s AC can’t be less than 16, regardless of what kind of armor it is wearing."
+Beacon of Hope,3,1 action,30 ft,VS,1 minute,{Cleric},0,1,Abjuration,"This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.
+"
+Beast Sense,2,1 action,touch,S,1 hour,"{Druid, Ranger}",1,1,Divination,"You touch a willing beast. For the duration of the spell, you can use your action to see through the beast’s eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses."
+Bestow Curse,3,1 action,touch,VS,1 minute,"{Bard, Cleric, Wizard}",0,1,Necromancy,"You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:
+
+Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.
+While cursed, the target has disadvantage on attack rolls against you.
+While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.
+While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.
+A Remove Curse spell ends this effect. At the DM’s option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse’s effect.
+
+At Higher Levels. If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn’t require concentration."
+Bigby's Hand,5,1 action,120 ft,VSM(an eggshell and a snakeskin glove),1 minute,"{Sorcerer, Wizard}",0,1,Evocation,"You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell’s duration, and it moves at your command, mimicking the movements of your own hand.
+
+The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn’t fill its space.
+
+When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.
+
+Clenched Fist. The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage.
+Forceful Hand. The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand’s Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it.
+
+Grasping Hand. The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand’s Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier.
+
+Interposing Hand. The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can’t move through the hand’s space if its Strength score is less than or equal to the hand’s Strength score. If its Strength score is higher than the hand’s Strength score, the target can move toward you through the hand’s space, but that space is difficult terrain for the target.
+
+At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th."
+Blade Barrier,6,1 action,90 ft,VS,10 minutes,{Cleric},0,1,Evocation,"You create a vertical wall of whirling, razor-sharp blades made of magical energy. The wall appears within range and lasts for the duration. You can make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides three-quarters cover to creatures behind it, and its space is difficult terrain.
+
+When a creature enters the wall’s area for the first time on a turn or starts its turn there, the creature must make a Dexterity saving throw. On a failed save, the creature takes 6d10 slashing damage. On a successful save, the creature takes half as much damage."
+Blade Ward,0,1 action,self,VS,1 round,"{Bard, Sorcerer, Warlock, Wizard}",0,0,Abjuration,"You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks."
+Bless,1,1 action,30 ft,VSM(a sprinkling of holy water),1 minute,"{Cleric, Paladin}",0,1,Enchantment,"You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+Blight,4,1 action,30 ft,VS,Instantaneous,"{Druid, Sorcerer, Warlock, Wizard}",0,0,Necromancy,"Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes 8d8 necrotic damage on a failed save, or half as much damage on a successful one. This spell has no effect on undead or constructs.
+
+If you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it. If you target a nonmagical plant that isn’t a creature, such as a tree or shrub, it doesn’t make a saving throw; it simply withers and dies.
+
+At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
+Blinding Smite,3,1 bonus action,self,V,1 minute,{Paladin},0,0,Evocation,"The next time you hit a creature with a melee weapon attack during this spell’s duration, you weapon flares with a bright light, and the attack deals an extra 3d8 radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be blinded until the spell ends.
+
+A creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded."
+Chill Touch,0,1 action,120 ft,VS,1 round,"{Sorcerer, Warlock, Wizard}",0,0,Necromancy,"You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can’t regain hit points until the start of your next turn. Until then, the hand clings to the target. If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.
+
+At Higher Levels. This spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+Dancing Lights,0,1 action,120 ft,"VSM(a bit of phosphorous or wychwood, or a glowworm)",1 minute,"{Bard, Sorcerer, Wizard}",0,1,Evocation,"You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.
+
+As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell’s range."
+Fire Bolt,0,1 action,120 ft,VS,Instantaneous,"{Sorcerer, Wizard}",0,0,Evocation,"You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn’t being worn or carried.
+
+At Higher Levels. This spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10)."
+Friends,0,1 action,self,SM(a small amount of makeup applied to the face as this spell is cast),1 minute,"{Bard, Sorcerer, Warlock, Wizard}",0,1,Enchantment,"For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn’t hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM’s discretion), depending on the nature of your interaction with it."
+Light,0,1 Action,touch,VM(a firefly or phosphorescent moss),1 hour,"{Bard, Cleric, Sorcerer, Wizard}",0,0,Evocation,"You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.
+
+If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell."
+Mage Hand,0,1 action,30 ft,VS,1 minute,"{Bard, Sorcerer, Warlock, Wizard}",0,0,Conjuration,"A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.
+
+You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it.
+
+The hand can’t attack, activate magical items, or carry more than 10 pounds."
+Mending,0,1 minute,touch,VSM(two lodestones),Instantaneous,"{Bard, Cleric, Druid, Sorcerer, Wizard}",0,0,Transmutation,"This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.
+
+This spell can physically repair a magic item or construct, but the spell can’t restore magic to such an object."
+Message,0,1 action,120 ft,VSM(a short piece of copper wire),1 round,"{Bard, Sorcerer, Wizard}",0,0,Transmutation,"You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.
+
+You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn’t have to follow a straight line and can travel freely around corners or through openings."
+Minor Illusion,0,1 action,30 ft,SM(a bit of fleece),1 minute,"{Bard, Sorcerer, Warlock, Wizard}",0,0,Illusion,"You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again.
+
+If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.
+
+If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.
+
+If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature."
+Poison Spray,0,1 action,10 ft,VS,Instantaneous,"{Druid, Sorcerer, Warlock, Wizard}",0,0,Conjuration,"You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.
+
+At Higher Levels. This spell’s damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12)."
+Prestidigitation,0,1 action,10 ft,VS,Up to 1 hour,"{Bard, Sorcerer, Warlock, Wizard}",0,0,Transmutation,"This spell is a minor magical trick that novice spellcasters use for practice. You create one of the following magical effects within range:
+
+You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.
+You instantaneously light or snuff out a candle, a torch, or a small campfire.
+You instantaneously clean or soil an object no larger than 1 cubic foot.
+You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.
+You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour.
+You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn.
+If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action."
+Ray of Frost,0,1 action,60 ft,VS,Instantaneous,"{Sorcerer, Wizard}",0,0,Evocation,"A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.
+
+At Higher Levels. The spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+Shocking Grasp,0,1 Action,touch,VS,Instantaneous,"{Sorcerer, Wizard}",0,0,Evocation,"Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can’t take reactions until the start of its next turn.
+
+At Higher Levels. The spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+True Strike,0,1 action,30 ft,S,1 round,"{Sorcerer, Warlock, Wizard}",0,1,Divination,"You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target’s defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn’t ended."
+Burning Hands,1,1 action,Self(15-foot cone),VS,Instantaneous,"{Sorcerer, Wizard}",0,0,Evocation,"As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one.
+
+The fire ignites any flammable objects in the area that aren’t being worn or carried.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
+Charm Person,1,1 action,30 ft,VS,1 hour,"{Bard, Druid, Sorcerer, Warlock, Wizard}",0,0,Enchantment,"You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
+Chromatic Orb,1,1 action,90 ft,VSM(a diamond worth at least 50 gp),Instantaneous,"{Sorcerer, Wizard}",0,0,Evocation,"You hurl a 4-inch-diameter sphere of energy at a creature that you can see within range. You choose acid, cold, fire, lightning, poison, or thunder for the type of orb you create, and then make a ranged spell attack against the target. If the attack hits, the creature takes 3d8 damage of the type you chose.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
+Color Spray,1,1 action,self(15-foot cone),VSM,1 round,"{Bard, Sorcerer, Wizard}",0,0,Illusion,"A dazzling array of flashing, colored light springs from your hand. Roll 6d10, the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can’t see).
+
+Starting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature’s hit points from the total before moving on to the creature with the next lowest hit points. A creature’s hit points must be equal to or less than the remaining total for the creature to be affected."
+Comprehend Languages,1,1 action,self,VSM(a pinch of soot and salt),1 hour,"{Bard, Sorcerer, Warlock, Wizard}",1,0,Divination,"For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.
+
+This spell doesn’t decode secret messages in a text or glyph, such as an arcane sigil, that isn’t part of a written language."
+Detect Magic,1,1 action,self,VS,10 minutes,"{Bard, Cleric, Druid, Paladin, Ranger, Sorcerer, Wizard}",1,1,Divination,"For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.
+
+The spell can penetrate most barriers, but is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
+Disguise Self,1,1 action,self,VS,1 hour,"{Bard, Sorcerer, Wizard}",0,0,Illusion,"You make yourself – including your clothing, armor, weapons, and other belongings on your person – look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can’t change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.
+
+The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair. To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC."
+Expeditious Retreat,1,1 bonus action,self,VS,10 minutes,"{Sorcerer, Warlock, Wizard}",0,1,Transmutation,"This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action."
+False Life,1,1 action,self,VSM(a small amount of alcohol or distilled spirits),1 hour,"{Sorcerer, Wizard}",0,0,Necromancy,"Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st."
+Feather Fall,1,1 reaction,60 ft,VM(a small feather or piece of down),1 minute,"{Bard, Sorcerer, Wizard}",0,0,Transmutation,"Take reaction when you or a creature within 60 feet of you falls:
+
+Choose up to five falling creatures within range. A falling creature’s rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.
+"
+Find Familiar ,1,,,,,,,,,
+Fog Cloud,1,,,,,,,,,
+Grease,1,,,,,,,,,
+Identify,1,,,,,,,,,
+Illusory Script,1,,,,,,,,,
+Jump,1,,,,,,,,,
+Longstrider,1,,,,,,,,,
+Mage Armor,1,,,,,,,,,
+Magic Missile,1,,,,,,,,,
+Protection from Evil and Good,1,,,,,,,,,
+Ray of Sickness,1,,,,,,,,,
+Shield,1,,,,,,,,,
+Silent Image,1,,,,,,,,,
+Sleep,1,,,,,,,,,
+Tasha's Hideous Laughter,1,,,,,,,,,
+Tenser's Floating Disk,1,,,,,,,,,
+Thunderwave,1,,,,,,,,,
+Unseen Servant,1,,,,,,,,,
+Witch Bolt,1,,,,,,,,,
+Blindness/Deafness,2,,,,,,,,,
+Blur,2,,,,,,,,,
+Cloud of Daggers,2,,,,,,,,,
+Continual Flame,2,,,,,,,,,
+Crown of Madness,2,,,,,,,,,
+Darkness,2,,,,,,,,,
+Darkvision,2,,,,,,,,,
+Detect Thoughts,2,,,,,,,,,
+Enlarge/Reduce,2,,,,,,,,,
+Flaming Sphere,2,,,,,,,,,
+Gentle Repose,2,,,,,,,,,
+Gust of Wind,2,,,,,,,,,
+Hold Person,2,,,,,,,,,
+Invisibility,2,,,,,,,,,
+Knock,2,,,,,,,,,
+Levitate,2,,,,,,,,,
+Locate Object,2,,,,,,,,,
+Magic Mouth,2,,,,,,,,,
+Magic Weapon,2,,,,,,,,,
+Melf's Acid Arrow,2,,,,,,,,,
+Mirror Image,2,,,,,,,,,
+Misty Step,2,,,,,,,,,
+Nystul's Magic Aura,2,,,,,,,,,
+Phantasmal Force,2,,,,,,,,,
+Ray of Enfeeblement,2,,,,,,,,,
+Rope Trick,2,,,,,,,,,
+Scorching Ray,2,,,,,,,,,
+See Invisibility,2,,,,,,,,,
+Shatter,2,,,,,,,,,
+Spider Climb,2,,,,,,,,,
+Suggestion,2,,,,,,,,,
+Web,2,,,,,,,,,
+Blink,3,,,,,,,,,
+Clairvoyance,3,,,,,,,,,
+Counterspell,3,,,,,,,,,
+Dispel Magic,3,,,,,,,,,
+Feign Death,3,,,,,,,,,
+Fireball,3,,,,,,,,,
+Fly,3,,,,,,,,,
+Gaseous Form,3,,,,,,,,,
+Glyph of Warding,3,,,,,,,,,
+Haste,3,,,,,,,,,
+Hypnotic Pattern,3,,,,,,,,,
+Leomund's Tiny Hut,3,,,,,,,,,
+Lightning Bolt,3,,,,,,,,,
+Magic Circle,3,,,,,,,,,
+Major Image,3,,,,,,,,,
+Nondetection,3,,,,,,,,,
+Phantom Steed,3,,,,,,,,,
+Protection from Energy,3,,,,,,,,,
+Remove Curse,3,,,,,,,,,
+Sending,3,,,,,,,,,
+Sleet Storm,3,,,,,,,,,
+Slow,3,,,,,,,,,
+Stinking Cloud,3,,,,,,,,,
+Tongues,3,,,,,,,,,
+Vampiric Touch,3,,,,,,,,,
+Water Breathing,3,,,,,,,,,
+Vicious Mockery,0,,,,,,,,,
+Cure Wounds,1,,,,,,,,,
+Dissonant Whispers,1,,,,,,,,,
+Faerie Fire,1,,,,,,,,,
+Healing Word,1,,,,,,,,,
+Heroism,1,,,,,,,,,
+Speak with Animals,1,,,,,,,,,
+Calm Emotions,2,,,,,,,,,
+Enhance Ability,2,,,,,,,,,
+Enthrall,2,,,,,,,,,
+Heat Metal,2,,,,,,,,,
+Lesser Restoration,2,,,,,,,,,
+Locate Animals or Plants,2,,,,,,,,,
+Silence,2,,,,,,,,,
+Zone of Truth,2,,,,,,,,,
+Fear,3,,,,,,,,,
+Plant Growth,3,,,,,,,,,
+Speak with Dead,3,,,,,,,,,
+Speak with Plants,3,,,,,,,,,
+Guidance,0,,,,,,,,,
+Resistance,0,,,,,,,,,
+Sacred Flame,0,,,,,,,,,
+Spare the Dying,0,,,,,,,,,
+Thaumaturgy,0,,,,,,,,,
+Command,1,,,,,,,,,
+Create or Destroy Water,1,,,,,,,,,
+Guiding Bolt,1,,,,,,,,,
+Inflict Wounds,1,,,,,,,,,
+Purify Food and Drink,1,,,,,,,,,
+Sanctuary,1,,,,,,,,,
+Shield of Faith,1,,,,,,,,,
+Find Traps,2,,,,,,,,,
+Prayer of Healing,2,,,,,,,,,
+Protection from Poison,2,,,,,,,,,
+Spiritual Weapon,2,,,,,,,,,
+Warding Bond,2,,,,,,,,,
+Create Food and Water,3,,,,,,,,,
+Daylight,3,,,,,,,,,
+Mass Healing Word,3,,,,,,,,,
+Meld into Stone,3,,,,,,,,,
+Revivify,3,,,,,,,,,
+Spirit Guardians,3,,,,,,,,,
+Water Walk,3,,,,,,,,,
+Druidcraft,0,,,,,,,,,
+Produce Flame,0,,,,,,,,,
+Shilleagh,0,,,,,,,,,
+Thorn Whip,0,,,,,,,,,
+Detect Poison and Disease,1,,,,,,,,,
+Entangle,1,,,,,,,,,
+Goodberry,1,,,,,,,,,
+Flame Blade,2,,,,,,,,,
+Moonbeam,2,,,,,,,,,
+Pass without Trace,2,,,,,,,,,
+Spike Growth,2,,,,,,,,,
+Call Lightning,3,,,,,,,,,
+Conjure Animals,3,,,,,,,,,
+Wind Wall,3,,,,,,,,,
