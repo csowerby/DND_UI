@@ -20,6 +20,7 @@ class Postgres:
         rows = self.cursor.fetchall()
         return rows
 
+
     def query_spells(self, dict):
         """ Does a query of spells on the db according to the params in this function. Returns rows
 

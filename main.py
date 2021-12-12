@@ -66,13 +66,33 @@ class GUI:
 
         while True:
             button, values = self.window.Read()
-            print(button)
+
+            if values[0] == "" and values[1] == 'Any' and values [2] == "Any" and values[3] == '' and values[4] == '' and values[5] == 'Any' and values[6] == 'Any' and values[7]== False:
+                blank = True
+            else:
+                blank = False
+
+            # Split on numbers
+            if button[-2].isdigit():
+                button_num = int(button[-2:])
+                button = button[:-2]
+            elif button[-1].isdigit():
+                button_num = int(button[-1])
+                button = button[:-1]
+            else:
+                button_num = None
+
+
             if button is None or button == 'Quit':
                 break
             elif button == 'Add':
+                if blank:
+                    continue
                 self.add(values)
                 self.update()
             elif button == 'Replace':
+                if blank:
+                    continue
                 self.replace(values)
                 self.update()
             elif button == 'Highlight':
@@ -81,21 +101,54 @@ class GUI:
                 self.rows = []
                 self.hl_rows = []
                 self.update()
-            elif button[:-1] == 'up':
-                row = self.rows.pop(int(button[-1]))
+            elif button == 'up':
+                row = self.rows.pop(button_num)
                 self.hl_rows.append(row)
                 self.update()
-            elif button[:-1] == 'hl_down':
-                row = self.hl_rows.pop(int(button[-1]))
+            elif button == 'hl_down':
+                row = self.hl_rows.pop(button_num)
                 self.rows.append(row)
                 self.update()
-            elif button[:-1] == 'hl_del':
-                self.hl_rows.pop(int(button[-1]))
+            elif button == 'hl_del':
+                self.hl_rows.pop(button_num)
                 self.update()
-            elif button[:-1] == 'del':
-                self.rows.pop(int(button[-1]))
+            elif button == 'del':
+                self.rows.pop(button_num)
                 self.update()
+            elif button == 'hl_spell_name':
+                print(self.hl_rows[button_num][0])
+                print("-------------")
+                print(self.hl_rows[button_num][10])
+                print("")
+            elif button == 'spell_name':
+                print(self.rows[button_num][0])
+                print("-------------")
+                print(self.rows[button_num][10])
+                print("")
+            elif button == 'hl_info':
+                row = self.hl_rows[button_num]
+                sg.popup(self.make_popup_text(row), font=(35), line_width=150)
 
+            elif button == 'info':
+                row = self.rows[button_num]
+                sg.popup(self.make_popup_text(row), font=(35), line_width=150)
+
+    def make_popup_text(self, row):
+        string = row[0]
+        string += "\n----------------\n"
+        string += f"Level: {row[1]}\n"
+        string += f"Casting Time: {row[2]}\n"
+        string += f"Range: {row[3]}\n"
+        string += f"Components: {row[4]}\n"
+        string += f"Duration: {row[5]}\n"
+        string += f"Classes: {row[6]}\n"
+        string += f"Ritual: {row[7]}\n"
+        string += f"Concentration: {row[8]}\n"
+        string += f"School: {row[9]}\n"
+        string += f"\nDescription:\n\n"
+        string += row[10]
+
+        return string
 
 
     def make_window(self):
@@ -103,7 +156,8 @@ class GUI:
         # Set Up Screen Layout
         input_frame= [
                     [sg.Text("Spell Name", size=(12, 1)), sg.InputText(size=(36, 1))],
-                    [sg.Text("Spell Level", size=(12, 1)), sg.Combo([   'Cantrip',
+                    [sg.Text("Spell Level", size=(12, 1)), sg.Combo([
+                                                                        'Cantrip',
                                                                         'Level 1',
                                                                         'Level 2',
                                                                         'Level 3',
@@ -112,8 +166,7 @@ class GUI:
                                                                         'Level 6',
                                                                         'Level 7',
                                                                         'Level 8',
-                                                                        'Level 9',
-                                                                        'Any'], default_value='Any', size=(24, 1))],
+                                                                        'Level 9'], default_value='Any', size=(24, 1))],
 
                     [sg.Text("Casting Time", size=(12, 1)), sg.Combo(['1 Action', '1 Bonus Action', '1 Reaction', 'Other', 'Any'], default_value='Any', size=(24, 1))],
                     [sg.Text("Range", size=(12, 1)), sg.InputText(size=(36, 1))],
@@ -121,7 +174,12 @@ class GUI:
                     [sg.Text("Class", size=(12, 1)), sg.Combo(['Wizard', 'Bard', 'Cleric', 'Druid', 'Paladin', 'Ranger', 'Sorcerer', 'Warlock', 'Any' ], default_value='Any', size=(24, 1))],
                     [sg.Text("School", size=(12, 1)), sg.Combo(['Abjuration', 'Conjuration', 'Divination', 'Enchantment', 'Evocation', 'Illusion', 'Necromancy', 'Transmutation', 'Any'], default_value='Any', size=(24,1))],
                     [sg.Text("Ritual?", size=(12, 1)), sg.Checkbox('Yes', default=False)],
-                    [sg.ReadButton('Add'), sg.ReadButton('Replace'), sg.Button('Highlight'), sg.Button('Clear'), sg.Button('Quit')]]
+                    [sg.Button('Add'), sg.Button('Replace'), sg.Button('Highlight'), sg.Button('Clear'), sg.Button('Quit')],
+                    [sg.Text('')],
+                    [sg.Text('Notes/Bugs I\'m still working on')],
+                    [sg.Text('---------------------------------')],
+                    [sg.Multiline('When searching spell names with an apostrophe, need to do twice:\n Bigby\'s Hand -> Bigby\'\'s Hand')]
+                    ]
 
 
 
@@ -152,21 +210,21 @@ class GUI:
                 components = component_list[0]
             else:
                 components = row[4]
-            if row[4] is not None and ' gp ' in row[4]:
+            if row[4] is not None and ' gp' in row[4]:
                 components += " ($)"
 
             duration = row[5]
             ritual = '  Y' if row[7] else ""
 
 
-            results_col.append([    sg.Text(spell_name, size=(18, 1)),
+            results_col.append([    sg.Button(spell_name, size=(18, 1), key=f'hl_spell_name{ii}'),
                                     sg.Text(level, size=(5, 1)),
                                     sg.Text(cast_time, size=(10, 1)),
                                     sg.Text(range, size=(15, 1)),
                                     sg.Text(components, size=(12, 1)),
                                     sg.Text(duration, size=(12, 1)),
                                     sg.Text(ritual, size=(8, 1)),
-                                    sg.Button('↑', key=f'hl_up{ii}'), sg.Button('↓', key=f'hl_down{ii}'), sg.Button('x', key=f'hl_del{ii}')
+                                    sg.Button('↑', key=f'hl_up{ii}'), sg.Button('↓', key=f'hl_down{ii}'), sg.Button('x', key=f'hl_del{ii}'), sg.Button('?', key=f'hl_info{ii}')
             ])
 
             ii += 1 # Add one to index
@@ -186,21 +244,21 @@ class GUI:
                 components = component_list[0]
             else:
                 components = row[4]
-            if row[4] is not None and ' gp ' in row[4]:
+            if row[4] is not None and ' gp' in row[4]:
                 components += " ($)"
 
             duration = row[5]
             ritual = '  Y' if row[7] else ""
 
 
-            results_col.append([    sg.Text(spell_name, size=(18, 1)),
+            results_col.append([    sg.Button(spell_name, size=(18, 1), key=f'spell_name{ii}'),
                                     sg.Text(level, size=(5, 1)),
                                     sg.Text(cast_time, size=(10, 1)),
                                     sg.Text(range, size=(15, 1)),
                                     sg.Text(components, size=(12, 1)),
                                     sg.Text(duration, size=(12, 1)),
                                     sg.Text(ritual, size=(8, 1)),
-                                    sg.Button('↑', key=f'up{ii}'), sg.Button('↓', key=f'down{ii}'), sg.Button('x', key=f'del{ii}')
+                                    sg.Button('↑', key=f'up{ii}'), sg.Button('↓', key=f'down{ii}'), sg.Button('x', key=f'del{ii}'), sg.Button('?', key=f'info{ii}')
             ])
 
             ii += 1 # Add one to index
@@ -227,15 +285,15 @@ class GUI:
             dict["spell_name"] = values[0]
         if values[1] != "Any":
             if values[1] == "Cantrip":
-                dict["level"] = 'C'
+                dict["level"] = '0'
             else:
                 dict["level"] = int(values[1][-1])
         if values[2] != "Any":
-            dict["casting_time"] = values[2]
+            dict["casting_time"] = values[2].lower()
         if values[3] != "":
-            dict["range"] = values[3]
+            dict["range"] = values[3].lower()
         if values[4] != "":
-            dict["duration"] = values[4]
+            dict["duration"] = values[4].lower()
         if values[5] != "Any":
             dict["classes"] = values[5]
         if values[6] != "Any":
@@ -244,36 +302,32 @@ class GUI:
             dict["ritual"] = True
 
         rows = database.query_spells(dict)
-        print([row[0] for row in rows])
         return rows
 
     def update(self):
         self.window.close()
         self.window = self.make_window()
 
+    def sort_func(self, row):
+        return row[0]
+
     # Button Methods
 
     def add(self, values):
         rows = self.search(values)
+        rows.sort(key=self.sort_func)
         self.rows += rows
         self.update()
 
     def replace(self, values):
         rows = self.search(values)
         self.rows = rows
+        self.rows.sort(key=self.sort_func)
         pass
 
     def highlight(self, values):
         pass
 
-    def up(self):
-        pass
-
-    def down(self):
-        pass
-
-    def delete(self):
-        pass
 
 
 
