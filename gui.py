@@ -126,12 +126,7 @@ class GUI:
                     [sg.Text("Class", size=(12, 1)), sg.Combo(['Wizard', 'Bard', 'Cleric', 'Druid', 'Paladin', 'Ranger', 'Sorcerer', 'Warlock', 'Any' ], default_value='Any', size=(24, 1))],
                     [sg.Text("School", size=(12, 1)), sg.Combo(['Abjuration', 'Conjuration', 'Divination', 'Enchantment', 'Evocation', 'Illusion', 'Necromancy', 'Transmutation', 'Any'], default_value='Any', size=(24,1))],
                     [sg.Text("Ritual?", size=(12, 1)), sg.Checkbox('Yes', default=False)],
-                    [sg.Button('Add'), sg.Button('Replace'), sg.Button('Highlight'), sg.Button('Clear'), sg.Button('Quit')],
-                    [sg.Text('')],
-                    [sg.Text('Notes/Bugs I\'m still working on')],
-                    [sg.Text('---------------------------------')],
-                    [sg.Multiline('When searching spell names with an apostrophe, need to do twice:\n Bigby\'s Hand -> Bigby\'\'s Hand')]
-                    ]
+                    [sg.Button('Add'), sg.Button('Replace'), sg.Button('Highlight'), sg.Button('Clear'), sg.Button('Quit')]]
 
 
 

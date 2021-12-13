@@ -2,7 +2,20 @@
 import psycopg2
 import PySimpleGUI as sg
 
+import sqlite3
 
+
+class Sqlite:
+    """
+    Class to connect to the built-in SQLite3 database on MacOS instead of postgres.
+    This is to hopefully not require a database setup if friends want to use this program in the future
+    
+    """
+    def __init__(self):
+        pass
+
+
+#------------------------------------------------------------------
 
 class Postgres:
     def __init__(self):
@@ -30,7 +43,7 @@ class Postgres:
 
         table: str
         conditions: dict
-        result_columns: list? I guess (this functionality is not likely to be implemted yet since I'm almost always querying for all columns)
+        result_columns: list? I guess (this functionality is not likely to be implemted yet since I'm almost always querying for all columns of a particular row)
 
         """
 
