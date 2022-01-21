@@ -1,7 +1,7 @@
 
 import PySimpleGUI as sg
 
-import database
+import database as db
 
 
 
@@ -248,7 +248,7 @@ class GUI:
         if values[7] == True:
             dict["ritual"] = True
 
-        rows = database.query_spells(dict)
+        rows = self.database.query_spells(dict)
         return rows
 
     def update(self):
